@@ -56,9 +56,9 @@ jobs:
     - name: Update software source list again
       run: sudo apt update
 
-  # This is a step to install lib32gcc1 package
-    - name: Install lib32gcc1 package
-      run: sudo apt install lib32gcc1
+  # This is a step to install lib32gcc-s1 package
+    - name: Install lib32gcc-s1 package
+      run: sudo apt install lib32gcc-s1
   
     - name: Checkout
       uses: actions/checkout@main

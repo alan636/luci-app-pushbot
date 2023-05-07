@@ -44,6 +44,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # This is a step to update the software source list
+    - name: Update software source list
+      run: sudo apt update
+
+  # This is a step to install multi-architecture support
+    - name: Install multi-architecture support
+      run: sudo dpkg --add-architecture i386
+
+  # This is a step to update the software source list again
+    - name: Update software source list again
+      run: sudo apt update
+
+  # This is a step to install lib32gcc1 package
+    - name: Install lib32gcc1 package
+      run: sudo apt install lib32gcc1
+  
     - name: Checkout
       uses: actions/checkout@main
 

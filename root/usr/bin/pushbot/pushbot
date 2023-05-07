@@ -184,7 +184,7 @@ function getip(){
 
 # 获取接口信息
 function getinterfacelist(){
-	[ `ubus list|grep -w -i "network.interface.wan"|wc -l` -ge "1" ] && ubus call network.interface.wan status && return
+	[ `ubus list|grep -w -i "network.interface.Erlou5g"|wc -l` -ge "1" ] && ubus call network.interface.Erlou5g status && return
 	[ `ubus list|grep -i "network.interface."|grep -v "loopback"|grep -v "wan6"|wc -l` -eq "1" ] && ubus call `ubus list|grep "network.interface."|grep -v "loopback"` status && return
 }
 

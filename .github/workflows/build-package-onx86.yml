@@ -58,7 +58,7 @@ jobs:
 
   # This is a step to install lib32gcc-s1 package
     - name: Install lib32gcc-s1 package
-      run: sudo apt-get install lib32gcc-s1 lib32gcc1 libc6-i386
+      run: sudo apt-get install lib32gcc-s1 libc6-i386
       
     - name: Checkout
       uses: actions/checkout@main
